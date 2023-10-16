@@ -2,20 +2,21 @@ import UIKit
 
 final class HomeScreenView: UIView {
     
-    private var collection: UICollectionView {
+    private var collectionView: UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let colletction = UICollectionView(
+        let collection = UICollectionView(
             frame: .zero,
             collectionViewLayout: layout
         )
-        colletction.translatesAutoresizingMaskIntoConstraints = false
-        colletction.showsHorizontalScrollIndicator = false
-        colletction.register(HomeCollectionCell.self, forCellWithReuseIdentifier: HomeCollectionCell.identifier)
-        colletction.backgroundColor = .clear
-        colletction.dataSource = self
-        colletction.delegate = self
-        return colletction
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.backgroundColor = .clear
+        collection.register(
+            HomeCollectionCell.self,
+            forCellWithReuseIdentifier: HomeCollectionCell.identifier
+        )
+        return collection
     }
     
     override init(frame: CGRect) {
@@ -27,6 +28,14 @@ final class HomeScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configProtocolsCollectionView(
+        delegate: UICollectionViewDelegate,
+        dataSource: UICollectionViewDataSource
+    ) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
     private func commonInit() {
         configureHierarchy()
         configureConstrains()
@@ -34,25 +43,14 @@ final class HomeScreenView: UIView {
     }
     
     private func configureHierarchy() {
-        addSubview(collection)
+        addSubview(collectionView)
     }
     
     private func configureConstrains() {
-        collection.constraints(view: self)
+        collectionView.constraints(view: self)
     }
     
     private func configureStyle() {
         backgroundColor = .orange
-    }
-    
-}
-
-extension HomeScreenView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
     }
 }
