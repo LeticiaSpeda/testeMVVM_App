@@ -2,7 +2,10 @@ import UIKit
 
 final class HomeScreenView: UIView {
     
-    private var collectionView: UICollectionView {
+    var counter = 0
+    
+    private lazy var collectionView: UICollectionView = {
+        counter += 1
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(
@@ -12,12 +15,9 @@ final class HomeScreenView: UIView {
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.showsHorizontalScrollIndicator = false
         collection.backgroundColor = .clear
-        collection.register(
-            HomeCollectionCell.self,
-            forCellWithReuseIdentifier: HomeCollectionCell.identifier
-        )
+        collection.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
         return collection
-    }
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -44,13 +44,31 @@ final class HomeScreenView: UIView {
     
     private func configureHierarchy() {
         addSubview(collectionView)
+        
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
+        _ = collectionView
+        print(counter)
     }
     
     private func configureConstrains() {
-        collectionView.constraints(view: self)
+        //collectionView.constraints(view: self)
+        
     }
     
     private func configureStyle() {
-        backgroundColor = .orange
+//        backgroundColor = .orange
     }
 }

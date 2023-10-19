@@ -2,7 +2,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    private var homeScreen = HomeScreenView()
+    private var homeScreen: HomeScreenView?
     private var viewModel = HomeViewModel()
     
     override func loadView() {
@@ -12,19 +12,20 @@ final class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        homeScreen.configProtocolsCollectionView(delegate: self, dataSource: self)
+        homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath)
         
-        return UICollectionViewCell()
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
