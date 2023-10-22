@@ -1,6 +1,6 @@
 import UIKit
 
-final class StoryCardCollectionViewCellScreen: UIView {
+final class StoryCardCollectionViewScreen: UIView {
     
     private lazy var cardView: UIView = {
         let view = UIView()

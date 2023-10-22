@@ -2,9 +2,11 @@ import UIKit
 
 final class StoryCardCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = String(describing: StoryCardCollectionViewCell.self)
+    static let identifier = String(
+        describing: StoryCardCollectionViewCell.self
+    )
     
-    private var screen = StoryCardCollectionViewCellScreen()
+    private var screen = StoryCardCollectionViewScreen()
     private var viewModel: StoryCardViewModel?
     
     override init(frame: CGRect) {
