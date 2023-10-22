@@ -18,6 +18,8 @@
 		E044E18B2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044E18A2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift */; };
 		E0AC93392ADB5A500054E6C0 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC93382ADB5A500054E6C0 /* HomeScreenView.swift */; };
 		E0DF9D3C2AE5365B00DC184E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DF9D3B2AE5365B00DC184E /* UIColor+Extension.swift */; };
+		E0DF9D3F2AE53B1200DC184E /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DF9D3E2AE53B1200DC184E /* StoryCardViewModel.swift */; };
+		E0DF9D422AE53BC600DC184E /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DF9D412AE53BC600DC184E /* Stories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E044E18A2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0AC93382ADB5A500054E6C0 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		E0DF9D3B2AE5365B00DC184E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E0DF9D3E2AE53B1200DC184E /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
+		E0DF9D412AE53BC600DC184E /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +54,8 @@
 		E014AFF12AE0317B00274E92 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E044E18A2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift */,
 				E044E1872AE0205F009BD2BE /* Screen */,
-				E0DF9D3A2AE534AD00DC184E /* StoryCardViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -75,6 +79,7 @@
 		E040E4D92ADB427C00D91089 /* AppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				E0DF9D402AE53BBA00DC184E /* Model */,
 				E044E1862ADD946C009BD2BE /* View */,
 				E044E1832ADD9404009BD2BE /* ViewModel */,
 				E044E17D2ADD8E98009BD2BE /* Extension */,
@@ -115,6 +120,7 @@
 		E044E1832ADD9404009BD2BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E0DF9D3E2AE53B1200DC184E /* StoryCardViewModel.swift */,
 				E044E1842ADD9415009BD2BE /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -138,12 +144,12 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		E0DF9D3A2AE534AD00DC184E /* StoryCardViewCell */ = {
+		E0DF9D402AE53BBA00DC184E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E044E18A2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift */,
+				E0DF9D412AE53BC600DC184E /* Stories.swift */,
 			);
-			path = StoryCardViewCell;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +226,8 @@
 				E040E4DB2ADB427C00D91089 /* AppDelegate.swift in Sources */,
 				E044E18B2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift in Sources */,
 				E0DF9D3C2AE5365B00DC184E /* UIColor+Extension.swift in Sources */,
+				E0DF9D3F2AE53B1200DC184E /* StoryCardViewModel.swift in Sources */,
+				E0DF9D422AE53BC600DC184E /* Stories.swift in Sources */,
 				E044E1852ADD9415009BD2BE /* HomeViewModel.swift in Sources */,
 				E040E4DD2ADB427C00D91089 /* SceneDelegate.swift in Sources */,
 				E044E1892AE02088009BD2BE /* StoryCardCollectionViewCellScreen.swift in Sources */,
