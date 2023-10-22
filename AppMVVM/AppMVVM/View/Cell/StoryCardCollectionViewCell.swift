@@ -32,7 +32,7 @@ final class StoryCardCollectionViewCell: UICollectionViewCell {
     }
     
     private func configureConstraints() {
-        screen.translatesAutoresizingMaskIntoConstraints = false
+        screen.translate()
         screen.constraints(view: contentView)
     }
 }

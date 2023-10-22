@@ -2,6 +2,10 @@ import UIKit
 
 extension UIView {
     
+    func translate() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func setCardShadow() {
         layer.shadowColor = UIColor(
             red: 0,
@@ -19,7 +23,7 @@ extension UIView {
     
     
     func constraints(view: UIView) {
-        translatesAutoresizingMaskIntoConstraints = false
+        translate()
         NSLayoutConstraint.activate([
             topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor

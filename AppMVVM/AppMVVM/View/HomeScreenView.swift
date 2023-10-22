@@ -9,7 +9,7 @@ final class HomeScreenView: UIView {
             frame: .zero,
             collectionViewLayout: layout
         )
-        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.translate()
         collection.showsHorizontalScrollIndicator = false
         collection.backgroundColor = .clear
         collection.register(

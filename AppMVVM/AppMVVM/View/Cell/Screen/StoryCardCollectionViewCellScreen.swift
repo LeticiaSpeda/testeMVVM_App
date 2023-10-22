@@ -6,7 +6,7 @@ final class StoryCardCollectionViewCellScreen: UIView {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 15
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.translate()
         view.setCardShadow()
         return view
     }()
@@ -18,7 +18,7 @@ final class StoryCardCollectionViewCellScreen: UIView {
             frame: .zero,
             collectionViewLayout: layout
         )
-        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.translate()
         collection.showsVerticalScrollIndicator = false
         collection.backgroundColor = .clear
         collection.contentInset = .init(top: 5, left: 0, bottom: 5, right: 0)
