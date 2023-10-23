@@ -1,5 +1,24 @@
 import UIKit
 
+protocol ViewCode {
+    func commonInit()
+    func configureHierachy()
+    func configureConstraints()
+    func configureStyle()
+}
+
+extension ViewCode {
+    func commonInit() {
+        configureStyle()
+        configureHierachy()
+        configureConstraints()
+    }
+
+    func configureStyle() {
+
+    }
+}
+
 extension UIView {
     
     func translate() {
@@ -20,8 +39,7 @@ extension UIView {
         layer.masksToBounds = false
         layer.rasterizationScale = UIScreen.main.scale
     }
-    
-    
+
     func constraints(view: UIView) {
         translate()
         NSLayoutConstraint.activate([
