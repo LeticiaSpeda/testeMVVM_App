@@ -17,8 +17,14 @@ final class StoryCollectionViewCell: UICollectionViewCell, ViewCode {
     }
 
     func configureConstraints() {
-        screen.translate()
+        screen.enableViewCode()
         screen.constraints(view: contentView)
+    }
+
+    func setupCell(data: Stories, indexPatch: IndexPath) {
+        screen.profileImageView.image = UIImage(named: data.image)
+        screen.userNameLabel.text = data.userName
+        screen.adicionarButton.isHidden = indexPatch.row == 0 ? false : true
     }
 
 }

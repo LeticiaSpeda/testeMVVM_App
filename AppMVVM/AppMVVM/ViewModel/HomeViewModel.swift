@@ -10,13 +10,13 @@ final class HomeViewModel {
     }
     
     private var story = [
-        Stories(image: "ïmg1", userName: "Add Story"),
-        Stories(image: "ïmg2", userName: "jack"),
-        Stories(image: "ïmg3", userName: "carolina"),
-        Stories(image: "ïmg4", userName: "samuel"),
-        Stories(image: "ïmg5", userName: "ariana josep"),
-        Stories(image: "ïmg6", userName: "puggy_101"),
-        Stories(image: "ïmg7", userName: "dheeraj_ks")
+        Stories(image: "img1", userName: "Add Story"),
+        Stories(image: "img2", userName: "jack"),
+        Stories(image: "img3", userName: "carolina"),
+        Stories(image: "img4", userName: "samuel"),
+        Stories(image: "img5", userName: "ariana josep"),
+        Stories(image: "img6", userName: "puggy_101"),
+        Stories(image: "img7", userName: "dheeraj_ks")
     ]
     
     func sizeForItem(indexPath: IndexPath, frame: CGRect) -> CGSize {

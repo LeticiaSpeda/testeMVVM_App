@@ -1,6 +1,6 @@
 import UIKit
 
-final class StoryCardCollectionViewCell: UICollectionViewCell {
+ class StoryCardCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(
         describing: StoryCardCollectionViewCell.self
@@ -34,7 +34,7 @@ final class StoryCardCollectionViewCell: UICollectionViewCell {
     }
     
     private func configureConstraints() {
-        screen.translate()
+        screen.enableViewCode()
         screen.constraints(view: contentView)
     }
 }
@@ -53,7 +53,15 @@ extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionVie
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        
+
+        guard let viewModel = viewModel else { return UICollectionViewCell() }
+
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell {
+
+            cell.setupCell(data: viewModel.loadCurrentStory(index: indexPath), indexPatch: indexPath)
+
+            return cell
+        }
         return UICollectionViewCell()
     }
     

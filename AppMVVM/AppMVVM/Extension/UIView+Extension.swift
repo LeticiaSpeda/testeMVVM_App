@@ -21,7 +21,7 @@ extension ViewCode {
 
 extension UIView {
     
-    func translate() {
+    func enableViewCode() {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -41,7 +41,7 @@ extension UIView {
     }
 
     func constraints(view: UIView) {
-        translate()
+        enableViewCode()
         NSLayoutConstraint.activate([
             topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor

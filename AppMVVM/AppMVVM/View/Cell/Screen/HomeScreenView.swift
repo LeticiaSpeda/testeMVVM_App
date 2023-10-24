@@ -9,7 +9,7 @@ final class HomeScreenView: UIView {
             frame: .zero,
             collectionViewLayout: layout
         )
-        collection.translate()
+        collection.enableViewCode()
         collection.showsHorizontalScrollIndicator = false
         collection.backgroundColor = .clear
         collection.register(
