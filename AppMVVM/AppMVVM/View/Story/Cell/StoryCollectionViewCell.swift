@@ -12,7 +12,7 @@ final class StoryCollectionViewCell: UICollectionViewCell, ViewCode {
 
     required init?(coder: NSCoder) { nil }
 
-    func configureHierachy() {
+    func configureHierarchy() {
         contentView.addSubview(screen)
     }
 

@@ -29,7 +29,7 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
         button.layer.cornerRadius = 12.5
         return button
     }()
-    
+
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -41,18 +41,18 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     @available(*,unavailable)
     required init?(coder: NSCoder) { nil }
-    
-    func configureHierachy() {
+
+    func configureHierarchy() {
         addSubview(borderView)
         profileImageView.addSubview(borderView)
         addSubview(profileImageView)
         addSubview(adicionarButton)
         addSubview(userNameLabel)
     }
-    
+
     func configureConstraints() {
         NSLayoutConstraint.activate([
             profileImageView.widthAnchor.constraint(
@@ -68,11 +68,11 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
                 equalTo: topAnchor,
                 constant: 15
             ),
-            
+
             adicionarButton.widthAnchor.constraint(
                 equalToConstant: 25
             ),
-            
+
             adicionarButton.heightAnchor.constraint(
                 equalToConstant: 25
             ),
@@ -82,7 +82,7 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
             adicionarButton.bottomAnchor.constraint(
                 equalTo: profileImageView.bottomAnchor
             ),
-            
+
             userNameLabel.topAnchor.constraint(
                 equalTo: profileImageView.bottomAnchor,
                 constant: 10

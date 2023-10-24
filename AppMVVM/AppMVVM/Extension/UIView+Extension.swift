@@ -2,7 +2,7 @@ import UIKit
 
 protocol ViewCode {
     func commonInit()
-    func configureHierachy()
+    func configureHierarchy()
     func configureConstraints()
     func configureStyle()
 }
@@ -10,7 +10,7 @@ protocol ViewCode {
 extension ViewCode {
     func commonInit() {
         configureStyle()
-        configureHierachy()
+        configureHierarchy()
         configureConstraints()
     }
 
