@@ -40,7 +40,7 @@ extension UIView {
         layer.rasterizationScale = UIScreen.main.scale
     }
 
-    func constraints(view: UIView) {
+    func pin(view: UIView) {
         enableViewCode()
         NSLayoutConstraint.activate([
             topAnchor.constraint(

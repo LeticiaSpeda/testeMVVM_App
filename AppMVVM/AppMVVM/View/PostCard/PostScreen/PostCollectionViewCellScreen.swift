@@ -1,5 +1,5 @@
 //
-//  PostCollectionViewCell.swift
+//  PostCollectionViewCellScreen.swift
 //  AppMVVM
 //
 //  Created by Leticia Speda on 01/11/23.

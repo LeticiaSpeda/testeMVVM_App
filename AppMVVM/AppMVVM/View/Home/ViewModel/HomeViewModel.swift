@@ -4,7 +4,11 @@ final class HomeViewModel {
     var getListStory: [Stories] {
         story
     }
-    
+
+     var getPosts: [Posts] {
+        posts
+    }
+
     var numberOfItems: Int {
         1
     }
@@ -18,7 +22,14 @@ final class HomeViewModel {
         Stories(image: "img6", userName: "puggy_101"),
         Stories(image: "img7", userName: "dheeraj_ks")
     ]
-    
+
+    private var posts = [
+        Posts(profileImage: "img2", userName: "jack", postImage: "post1"),
+        Posts(profileImage: "img4", userName: "samuel", postImage: "post2"),
+        Posts(profileImage: "img3", userName: "carolina", postImage: "post3"),
+        Posts(profileImage: "img6", userName: "puggy_101", postImage: "post4")
+    ]
+
     func sizeForItem(indexPath: IndexPath, frame: CGRect) -> CGSize {
         if indexPath.row == 0 {
             return CGSize(width: 120, height: frame.height)
