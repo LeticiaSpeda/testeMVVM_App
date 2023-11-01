@@ -22,7 +22,7 @@ final class PostCardCollectionViewCell: UICollectionViewCell, ViewCode {
 
     func configureConstraints() {
         screen.enableViewCode()
-        screen.constraints(view: contentView)
+        screen.pin(view: contentView)
     }
 
     func setupCell(listPost: [Posts]) {
@@ -37,7 +37,10 @@ extension PostCardCollectionViewCell: UICollectionViewDelegate, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        UICollectionViewCell()
+        guard let viewModel = viewModel else { return UICollectionViewCell()}
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as? PostCollectionViewCell
+        cell?.setupCell(data: viewModel.loadCurrentPost(indexPath: indexPath))
+        return cell ?? UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
