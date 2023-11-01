@@ -17,8 +17,7 @@ final class StoryCollectionViewCell: UICollectionViewCell, ViewCode {
     }
 
     func configureConstraints() {
-        screen.enableViewCode()
-        screen.constraints(view: contentView)
+        screen.pin(view: contentView)
     }
 
     func setupCell(data: Stories, indexPatch: IndexPath) {

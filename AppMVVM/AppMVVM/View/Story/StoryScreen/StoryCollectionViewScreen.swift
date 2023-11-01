@@ -23,7 +23,10 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
     lazy var adicionarButton: UIButton = {
         let button = UIButton()
         button.enableViewCode()
-        button.setBackgroundImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
+        button.setBackgroundImage(
+            UIImage(systemName: "plus.circle.fill"),
+            for: .normal
+        )
         button.imageView?.tintColor = .blue
         button.backgroundColor = .white
         button.layer.cornerRadius = 12.5
@@ -37,6 +40,7 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
         label.enableViewCode()
         return label
     }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

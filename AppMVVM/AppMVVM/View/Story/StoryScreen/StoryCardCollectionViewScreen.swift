@@ -71,6 +71,6 @@ final class StoryCardCollectionViewScreen: UIView {
             ),
         ])
         
-        collectionView.constraints(view: cardView)
+        collectionView.pin(view: cardView)
     }
 }

@@ -1,10 +1,7 @@
 import UIKit
 
- class StoryCardCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = String(
-        describing: StoryCardCollectionViewCell.self
-    )
+final class StoryCardCollectionViewCell: UICollectionViewCell, ViewCode {
+    static let identifier = String( describing: StoryCardCollectionViewCell.self)
     
     private var screen = StoryCardCollectionViewScreen()
     private var viewModel: StoryCardViewModel?
@@ -23,24 +20,22 @@ import UIKit
     func setupCell(listStories: [Stories]) {
         viewModel = StoryCardViewModel(listStory: listStories)
     }
-    
-    private func commonInit() {
-        configureHierarchy()
-        configureConstraints()
-    }
-    
-    private func configureHierarchy() {
+
+
+    func configureHierarchy() {
         contentView.addSubview(screen)
     }
     
-    private func configureConstraints() {
-        screen.enableViewCode()
-        screen.constraints(view: contentView)
+    func configureConstraints() {
+        screen.pin(view: contentView)
     }
 }
 
-extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+extension StoryCardCollectionViewCell: UICollectionViewDelegate,
+                                       UICollectionViewDataSource,
+                                       UICollectionViewDelegateFlowLayout
+{
+
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
