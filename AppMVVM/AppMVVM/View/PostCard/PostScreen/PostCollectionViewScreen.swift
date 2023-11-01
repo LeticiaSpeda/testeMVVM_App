@@ -38,7 +38,7 @@ final class PostCollectionViewScreen: UIView, ViewCode {
     }
 
     func configureConstraints() {
-        collectionView.constraints(view: self)
+        collectionView.pin(view: self)
     }
 
 
