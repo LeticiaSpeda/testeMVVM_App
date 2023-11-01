@@ -16,6 +16,7 @@ final class HomeScreenView: UIView {
             StoryCardCollectionViewCell.self,
             forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier
         )
+        collection.register(PostCardCollectionViewCell.self, forCellWithReuseIdentifier: PostCardCollectionViewCell.identifier)
         return collection
     }()
     
@@ -45,7 +46,7 @@ final class HomeScreenView: UIView {
     }
     
     private func configureConstrains() {
-        collectionView.constraints(view: self)
+        collectionView.pin(view: self)
     }
     
     private func configureStyle() {
