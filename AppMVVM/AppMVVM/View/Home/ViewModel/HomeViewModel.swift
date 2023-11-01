@@ -10,7 +10,7 @@ final class HomeViewModel {
     }
 
     var numberOfItems: Int {
-        1
+        2
     }
     
     private var story = [

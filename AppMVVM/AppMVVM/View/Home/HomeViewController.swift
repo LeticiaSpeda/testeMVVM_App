@@ -1,7 +1,6 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-
     private var homeScreen: HomeScreenView?
     private var viewModel = HomeViewModel()
 
@@ -10,6 +9,7 @@ final class HomeViewController: UIViewController {
         homeScreen = HomeScreenView()
         view = homeScreen
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         homeScreen?.configProtocolsCollectionView(
@@ -19,7 +19,10 @@ final class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegate,
+                              UICollectionViewDataSource,
+                              UICollectionViewDelegateFlowLayout 
+{
 
     func collectionView(
         _ collectionView: UICollectionView,
@@ -34,12 +37,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
 
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath) as? StoryCardCollectionViewCell {
-            cell.setupCell(listStories: viewModel.getListStory)
-            return cell
-        }
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath) as? StoryCardCollectionViewCell
+                cell?.setupCell(listStories: viewModel.getListStory)
 
-        return UICollectionViewCell()
+            return cell ?? UICollectionViewCell()
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCardCollectionViewCell.identifier, for: indexPath) as? PostCardCollectionViewCell
+            cell?.setupCell(listPost: viewModel.getPosts)
+            return cell ?? UICollectionViewCell()
+        }
     }
 
     func collectionView(
