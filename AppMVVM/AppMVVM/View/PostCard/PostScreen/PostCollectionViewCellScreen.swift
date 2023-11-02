@@ -21,7 +21,7 @@ final class PostCollectionViewCellScreen: UIView, ViewCode {
         tap.numberOfTapsRequired = 1 // apenas com um click
         imageView.addGestureRecognizer(tap) // gesto de toque
         imageView.isUserInteractionEnabled = true // a imagem possui interacao
-        imageView.isHidden = false
+        imageView.isHidden = true
         return imageView
     }()
 
@@ -58,6 +58,7 @@ final class PostCollectionViewCellScreen: UIView, ViewCode {
     private lazy var heartImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage.whiteheart)
         imageView.contentMode = .scaleAspectFill
+        imageView.isHidden = true
         imageView.enableViewCode()
         return imageView
     }()
@@ -71,11 +72,29 @@ final class PostCollectionViewCellScreen: UIView, ViewCode {
     required init?(coder: NSCoder) { nil }
 
     @objc func tappedPostImageView() {
-
+        heartImageView.isHidden = false
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.heartImageView.transform = .init(scaleX: 1.8, y: 1.8)
+            self.postImageView.transform = .init(scaleX: 1.05, y: 1.05)
+            self.likeImageView.center.y += 50
+        } ,completion: { finished in
+            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.postImageView.transform = .identity
+                self.likeImageView.center.y -= 50
+                self.likeImageView.isHidden = false
+            })
+            self.heartImageView.transform = .identity
+            self.heartImageView.isHidden = true
+        })
     }
 
     @objc func tappedLikeImageView() {
-
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.likeImageView.center.y += 50
+        }, completion: { finished in
+            self.likeImageView.center.y -= 50
+            self.likeImageView.isHidden = true
+        })
     }
 
     func configureHierarchy() {
