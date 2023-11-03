@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD3cSw75w_SJYG-x6uaScLLN5eNzeY0h9o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>876440366506</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.spedaLeticia.AppMVVM</string>
+	<key>PROJECT_ID</key>
+	<string>primeiroappmvvm-cd049</string>
+	<key>STORAGE_BUCKET</key>
+	<string>primeiroappmvvm-cd049.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:876440366506:ios:70665d91f28bb050458fd3</string>
+</dict>
+</plist>
