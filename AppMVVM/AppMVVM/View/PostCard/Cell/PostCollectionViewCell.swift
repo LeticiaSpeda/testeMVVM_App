@@ -12,11 +12,11 @@ final class PostCollectionViewCell: UICollectionViewCell, ViewCode {
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         contentView.addSubview(screen)
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         screen.pin(view: contentView)
     }
 

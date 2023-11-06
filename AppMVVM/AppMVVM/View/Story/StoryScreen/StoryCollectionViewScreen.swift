@@ -49,7 +49,7 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
     @available(*,unavailable)
     required init?(coder: NSCoder) { nil }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         addSubview(borderView)
         profileImageView.addSubview(borderView)
         addSubview(profileImageView)
@@ -57,7 +57,7 @@ final class StoryCollectionViewScreen: UIView, ViewCode {
         addSubview(userNameLabel)
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             profileImageView.widthAnchor.constraint(
                 equalToConstant: 80

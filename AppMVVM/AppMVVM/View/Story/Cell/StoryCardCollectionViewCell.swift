@@ -22,11 +22,11 @@ final class StoryCardCollectionViewCell: UICollectionViewCell, ViewCode {
     }
 
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         contentView.addSubview(screen)
     }
     
-    func configureConstraints() {
+    func setupConstraints() {
         screen.pin(view: contentView)
     }
 }

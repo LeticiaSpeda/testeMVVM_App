@@ -2,19 +2,19 @@ import UIKit
 
 protocol ViewCode {
     func commonInit()
-    func configureHierarchy()
-    func configureConstraints()
-    func configureStyle()
+    func setupHierarchy()
+    func setupConstraints()
+    func setupStyle()
 }
 
 extension ViewCode {
     func commonInit() {
-        configureStyle()
-        configureHierarchy()
-        configureConstraints()
+        setupStyle()
+        setupHierarchy()
+        setupConstraints()
     }
 
-    func configureStyle() {
+    func setupStyle() {
 
     }
 }

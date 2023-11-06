@@ -32,12 +32,12 @@ final class PostCollectionViewScreen: UIView, ViewCode {
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
     }
-    func configureHierarchy() {
+    func setupHierarchy() {
         addSubview(collectionView)
 
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         collectionView.pin(view: self)
     }
 

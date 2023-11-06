@@ -16,11 +16,11 @@ final class PostCardCollectionViewCell: UICollectionViewCell, ViewCode {
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         contentView.addSubview(screen)
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         screen.enableViewCode()
         screen.pin(view: contentView)
     }

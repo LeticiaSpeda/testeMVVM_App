@@ -97,7 +97,7 @@ final class PostCollectionViewCellScreen: UIView, ViewCode {
         })
     }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         addSubview(cardView)
 
         cardView.addSubview(likeImageView)
@@ -107,7 +107,7 @@ final class PostCollectionViewCellScreen: UIView, ViewCode {
         cardView.addSubview(heartImageView)
     }
     
-    func configureConstraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             cardView.topAnchor.constraint(
                 equalTo: safeAreaLayoutGuide.topAnchor,
