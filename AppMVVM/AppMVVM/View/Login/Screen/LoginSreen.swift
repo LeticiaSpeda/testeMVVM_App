@@ -17,7 +17,7 @@ final class LoginSreen: UIView, ViewCode {
         return label
     }()
 
-    private lazy var emailTextField: UITextField = {
+    private(set) lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.layer.cornerRadius = 10
         textField.backgroundColor = .white.withAlphaComponent(0.8)
@@ -26,7 +26,7 @@ final class LoginSreen: UIView, ViewCode {
         return textField
     }()
 
-    private lazy var passwordTextField: UITextField = {
+    private(set) lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.layer.cornerRadius = 10
         textField.backgroundColor = .white.withAlphaComponent(0.8)
