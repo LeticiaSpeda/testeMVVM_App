@@ -52,6 +52,8 @@
 		E044E18B2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044E18A2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift */; };
 		E096612C2AF96A1700819CB7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096612B2AF96A1700819CB7 /* LoginViewModel.swift */; };
 		E0AC93392ADB5A500054E6C0 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC93382ADB5A500054E6C0 /* HomeScreenView.swift */; };
+		E0D754C32AFA475C001E3AB6 /* UILabelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D754C22AFA475C001E3AB6 /* UILabelCustom.swift */; };
+		E0D754C52AFA479C001E3AB6 /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D754C42AFA479C001E3AB6 /* TextFieldCustom.swift */; };
 		E0DBD8E22AF2D6F400CE86D8 /* PostCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBD8E12AF2D6F400CE86D8 /* PostCardViewModel.swift */; };
 		E0DBD8E52AF2DB5900CE86D8 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBD8E42AF2DB5900CE86D8 /* PostCollectionViewCell.swift */; };
 		E0DBD8E72AF2DCD300CE86D8 /* PostCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBD8E62AF2DCD300CE86D8 /* PostCollectionViewCellScreen.swift */; };
@@ -84,6 +86,8 @@
 		E044E18A2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		E096612B2AF96A1700819CB7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E0AC93382ADB5A500054E6C0 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		E0D754C22AFA475C001E3AB6 /* UILabelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelCustom.swift; sourceTree = "<group>"; };
+		E0D754C42AFA479C001E3AB6 /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 		E0DBD8E12AF2D6F400CE86D8 /* PostCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardViewModel.swift; sourceTree = "<group>"; };
 		E0DBD8E42AF2DB5900CE86D8 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0DBD8E62AF2DCD300CE86D8 /* PostCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCellScreen.swift; sourceTree = "<group>"; };
@@ -208,22 +212,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		E012C87A2AF5770D0032CB08 /* Login */ = {
+		E012C87A2AF5770D0032CB08 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E012C87B2AF5771C0032CB08 /* LoginViewController.swift */,
-				E096612A2AF96A0700819CB7 /* ViewModel */,
-				E012C87D2AF5772D0032CB08 /* Screen */,
+				E096612A2AF96A0700819CB7 /* LoginViewModel */,
+				E012C87D2AF5772D0032CB08 /* LoginScreen */,
 			);
-			path = Login;
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
-		E012C87D2AF5772D0032CB08 /* Screen */ = {
+		E012C87D2AF5772D0032CB08 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
 				E012C87E2AF577710032CB08 /* LoginSreen.swift */,
 			);
-			path = Screen;
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 		E040E4CE2ADB427C00D91089 = {
@@ -296,7 +300,9 @@
 		E044E1862ADD946C009BD2BE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E012C87A2AF5770D0032CB08 /* Login */,
+				E0D754C12AFA4733001E3AB6 /* Custons */,
+				E0D754BE2AFA46D6001E3AB6 /* Cadastro */,
+				E012C87A2AF5770D0032CB08 /* LoginViewController */,
 				E00264BB2AE81D220089588F /* Home */,
 				E00264B52AE81C6B0089588F /* Story */,
 				E00264B62AE81C7C0089588F /* PostCard */,
@@ -312,12 +318,28 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
-		E096612A2AF96A0700819CB7 /* ViewModel */ = {
+		E096612A2AF96A0700819CB7 /* LoginViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				E096612B2AF96A1700819CB7 /* LoginViewModel.swift */,
 			);
-			path = ViewModel;
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
+		E0D754BE2AFA46D6001E3AB6 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		E0D754C12AFA4733001E3AB6 /* Custons */ = {
+			isa = PBXGroup;
+			children = (
+				E0D754C22AFA475C001E3AB6 /* UILabelCustom.swift */,
+				E0D754C42AFA479C001E3AB6 /* TextFieldCustom.swift */,
+			);
+			path = Custons;
 			sourceTree = "<group>";
 		};
 		E0DBD8E02AF2D6D800CE86D8 /* ViewModel */ = {
@@ -508,6 +530,7 @@
 				E00264B82AE81C9B0089588F /* PostCardCollectionViewCell.swift in Sources */,
 				E044E18B2AE0213D009BD2BE /* StoryCardCollectionViewCell.swift in Sources */,
 				E0DF9D3C2AE5365B00DC184E /* UIColor+Extension.swift in Sources */,
+				E0D754C32AFA475C001E3AB6 /* UILabelCustom.swift in Sources */,
 				E0DF9D442AE5406100DC184E /* StoryCollectionViewCell.swift in Sources */,
 				E0DF9D3F2AE53B1200DC184E /* StoryCardViewModel.swift in Sources */,
 				E012C87C2AF5771C0032CB08 /* LoginViewController.swift in Sources */,
@@ -521,6 +544,7 @@
 				E044E1892AE02088009BD2BE /* StoryCardCollectionViewScreen.swift in Sources */,
 				E044E17F2ADD8EAF009BD2BE /* UIView+Extension.swift in Sources */,
 				E012C87F2AF577710032CB08 /* LoginSreen.swift in Sources */,
+				E0D754C52AFA479C001E3AB6 /* TextFieldCustom.swift in Sources */,
 				E0AC93392ADB5A500054E6C0 /* HomeScreenView.swift in Sources */,
 				E00264C12AE821380089588F /* Posts.swift in Sources */,
 			);

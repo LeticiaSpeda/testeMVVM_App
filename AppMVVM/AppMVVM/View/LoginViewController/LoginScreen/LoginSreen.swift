@@ -3,6 +3,7 @@ import SnapKit
 
 protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
+    func tappedRegisterButton()
 }
 
 final class LoginSreen: UIView, ViewCode {
@@ -46,6 +47,16 @@ final class LoginSreen: UIView, ViewCode {
         return button
     }()
 
+    private lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Registre-se", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .magenta.withAlphaComponent(0.3)
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        return button
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -60,6 +71,10 @@ final class LoginSreen: UIView, ViewCode {
         delegate?.tappedLoginButton()
     }
 
+    @objc func tappedRegisterButton() {
+        delegate?.tappedRegisterButton()
+    }
+
     func delegate(_ delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
@@ -69,6 +84,7 @@ final class LoginSreen: UIView, ViewCode {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
+        addSubview(registerButton)
     }
 
     func setupConstraints() {
@@ -76,6 +92,7 @@ final class LoginSreen: UIView, ViewCode {
         setupEmailTextFieldConstraints()
         setupPasswordTextFieldConstraints()
         setupLoginButtonConstraints()
+        setupRegisterButtonConstraints()
     }
 
     private func setupWelcomeConstraints() {
@@ -106,6 +123,15 @@ final class LoginSreen: UIView, ViewCode {
     private func setupLoginButtonConstraints() {
         loginButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(16)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(16)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(16)
+            make.height.equalTo(30)
+        }
+    }
+
+    private func setupRegisterButtonConstraints() {
+        registerButton.snp.makeConstraints { make in
+            make.top.equalTo(loginButton.snp.bottom).offset(16)
             make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(16)
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(16)
             make.height.equalTo(30)

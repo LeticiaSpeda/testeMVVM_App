@@ -5,7 +5,6 @@ final class LoginViewController: UIViewController {
     private var screen = LoginSreen()
     private var viewModel: LoginViewModeling
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         screen = LoginSreen()
@@ -21,8 +20,6 @@ final class LoginViewController: UIViewController {
 
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
-
-
 }
 
 extension LoginViewController: LoginViewModelDelegate {
@@ -40,6 +37,10 @@ extension LoginViewController: LoginViewModelDelegate {
 }
 
 extension LoginViewController: LoginScreenProtocol {
+    func tappedRegisterButton() {
+        print("ok")
+    }
+    
     func tappedLoginButton() {
         viewModel.login(email: screen.emailTextField.text ?? "", password: screen.passwordTextField.text ?? "")
     }
