@@ -54,6 +54,8 @@
 		E0AC93392ADB5A500054E6C0 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC93382ADB5A500054E6C0 /* HomeScreenView.swift */; };
 		E0D754C32AFA475C001E3AB6 /* UILabelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D754C22AFA475C001E3AB6 /* UILabelCustom.swift */; };
 		E0D754C52AFA479C001E3AB6 /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D754C42AFA479C001E3AB6 /* TextFieldCustom.swift */; };
+		E0D754C92AFA691C001E3AB6 /* RegisterViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D754C82AFA691C001E3AB6 /* RegisterViewScreen.swift */; };
+		E0D754CB2AFA6A1D001E3AB6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D754CA2AFA6A1D001E3AB6 /* RegisterViewController.swift */; };
 		E0DBD8E22AF2D6F400CE86D8 /* PostCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBD8E12AF2D6F400CE86D8 /* PostCardViewModel.swift */; };
 		E0DBD8E52AF2DB5900CE86D8 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBD8E42AF2DB5900CE86D8 /* PostCollectionViewCell.swift */; };
 		E0DBD8E72AF2DCD300CE86D8 /* PostCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBD8E62AF2DCD300CE86D8 /* PostCollectionViewCellScreen.swift */; };
@@ -88,6 +90,8 @@
 		E0AC93382ADB5A500054E6C0 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		E0D754C22AFA475C001E3AB6 /* UILabelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelCustom.swift; sourceTree = "<group>"; };
 		E0D754C42AFA479C001E3AB6 /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
+		E0D754C82AFA691C001E3AB6 /* RegisterViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewScreen.swift; sourceTree = "<group>"; };
+		E0D754CA2AFA6A1D001E3AB6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E0DBD8E12AF2D6F400CE86D8 /* PostCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardViewModel.swift; sourceTree = "<group>"; };
 		E0DBD8E42AF2DB5900CE86D8 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0DBD8E62AF2DCD300CE86D8 /* PostCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCellScreen.swift; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 		E0D754BE2AFA46D6001E3AB6 /* Cadastro */ = {
 			isa = PBXGroup;
 			children = (
+				E0D754C82AFA691C001E3AB6 /* RegisterViewScreen.swift */,
+				E0D754CA2AFA6A1D001E3AB6 /* RegisterViewController.swift */,
 			);
 			path = Cadastro;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				E0DF9D422AE53BC600DC184E /* Stories.swift in Sources */,
 				E0DBD8E52AF2DB5900CE86D8 /* PostCollectionViewCell.swift in Sources */,
 				E0DBD8E22AF2D6F400CE86D8 /* PostCardViewModel.swift in Sources */,
+				E0D754C92AFA691C001E3AB6 /* RegisterViewScreen.swift in Sources */,
 				E044E1852ADD9415009BD2BE /* HomeViewModel.swift in Sources */,
 				E040E4DD2ADB427C00D91089 /* SceneDelegate.swift in Sources */,
 				E00264BD2AE81DAF0089588F /* PostCollectionViewScreen.swift in Sources */,
@@ -545,6 +552,7 @@
 				E044E17F2ADD8EAF009BD2BE /* UIView+Extension.swift in Sources */,
 				E012C87F2AF577710032CB08 /* LoginSreen.swift in Sources */,
 				E0D754C52AFA479C001E3AB6 /* TextFieldCustom.swift in Sources */,
+				E0D754CB2AFA6A1D001E3AB6 /* RegisterViewController.swift in Sources */,
 				E0AC93392ADB5A500054E6C0 /* HomeScreenView.swift in Sources */,
 				E00264C12AE821380089588F /* Posts.swift in Sources */,
 			);

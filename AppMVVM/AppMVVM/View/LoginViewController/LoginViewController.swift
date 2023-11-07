@@ -3,6 +3,7 @@ import UIKit
 final class LoginViewController: UIViewController {
 
     private var screen = LoginSreen()
+    private var register = RegisterViewController()
     private var viewModel: LoginViewModeling
 
     override func viewDidLoad() {
@@ -38,7 +39,9 @@ extension LoginViewController: LoginViewModelDelegate {
 
 extension LoginViewController: LoginScreenProtocol {
     func tappedRegisterButton() {
-        print("ok")
+        let navigation = UINavigationController(rootViewController: register)
+        navigation.modalPresentationStyle = .fullScreen
+        present(navigation, animated: true)
     }
     
     func tappedLoginButton() {
