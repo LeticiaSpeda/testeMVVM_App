@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3E13FA6C-FFC2-4DCA-B7BF-6C0A2A0C06C9"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C19E00D-C75A-40EA-9BAC-74C8713A4745"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppMVVM/View/Register/RegisterViewScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "tappedRegisterButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA1B89F2-1B58-4AA8-B62A-3596EB310D5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppMVVM/View/Register/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "tappedRegister()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FA1B89F2-1B58-4AA8-B62A-3596EB310D5D - 73fdd1d3befc158a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppMVVM.RegisterViewController.tappedRegister() -&gt; ()"
+                  moduleName = "AppMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leticiaspeda/PrimeiroAppMVVM/AppMVVM/AppMVVM/View/Register/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "FA1B89F2-1B58-4AA8-B62A-3596EB310D5D - 73fdd1d3befc15a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppMVVM.RegisterViewController.tappedRegister() -&gt; ()"
+                  moduleName = "AppMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leticiaspeda/PrimeiroAppMVVM/AppMVVM/AppMVVM/View/Register/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
