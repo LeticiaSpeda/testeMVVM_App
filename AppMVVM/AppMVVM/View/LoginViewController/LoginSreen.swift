@@ -37,7 +37,7 @@ final class LoginSreen: UIView, ViewCode {
         return textField
     }()
 
-    private lazy var loginButton: UIButton = {
+    private(set) lazy var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)

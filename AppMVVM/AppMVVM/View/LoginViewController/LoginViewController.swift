@@ -2,15 +2,14 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    private var screen = LoginSreen()
-    private var register = RegisterViewController()
+    private var loginScreen = LoginSreen()
     private var viewModel: LoginViewModeling
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen = LoginSreen()
-        view = screen
-        screen.delegate = self
+        loginScreen = LoginSreen()
+        view = loginScreen
+        loginScreen.delegate = self
         viewModel.delegate = self
     }
 
@@ -39,12 +38,33 @@ extension LoginViewController: LoginViewModelDelegate {
 
 extension LoginViewController: LoginScreenProtocol {
     func tappedRegisterButton() {
-        let navigation = UINavigationController(rootViewController: register)
+        let viewModel = RegisterViewModel()
+        let controller = RegisterViewController(viewModel: viewModel)
+        let navigation = UINavigationController(rootViewController: controller)
         navigation.modalPresentationStyle = .fullScreen
         present(navigation, animated: true)
     }
     
     func tappedLoginButton() {
-        viewModel.login(email: screen.emailTextField.text ?? "", password: screen.passwordTextField.text ?? "")
+        viewModel.login(email: loginScreen.emailTextField.text ?? "", password: loginScreen.passwordTextField.text ?? "")
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let email: String = loginScreen.emailTextField.text ?? ""
+        let passwordTextField: String = loginScreen.passwordTextField.text ?? ""
+        if !email.isEmpty && !passwordTextField.isEmpty {
+            loginScreen.loginButton.isEnabled = true
+            loginScreen.loginButton.backgroundColor = .darkGray
+        } else {
+            print ("Botao desabilitado")
+            loginScreen.loginButton.isEnabled = false
+            loginScreen.loginButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+        }
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return false
+        }
     }
 }

@@ -3,9 +3,8 @@ import Firebase
 
 protocol LoginViewModeling {
     func login(email: String, password: String)
-    func registerUser(email: String, password: String)
 
-    var delegate: LoginViewModelDelegate? { get set}
+    var delegate: LoginViewModelDelegate? { get set }
 }
 
 protocol LoginViewModelDelegate: AnyObject {
@@ -14,7 +13,6 @@ protocol LoginViewModelDelegate: AnyObject {
 }
 
 final class LoginViewModel: LoginViewModeling {
-
     private var auth = Auth.auth()
     weak var delegate: LoginViewModelDelegate?
 
@@ -27,15 +25,4 @@ final class LoginViewModel: LoginViewModeling {
             }
         }
     }
-
-    func registerUser(email: String, password: String) {
-        auth.createUser(withEmail: email, password: password) { authResult, error in
-            if error == nil {
-                print("Sucesso Cadastrado")
-            } else {
-                print("Erro Cadastrado")
-            }
-        }
-    }
-
 }

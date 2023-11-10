@@ -35,13 +35,12 @@ final class RegisterViewScreen: UIView, ViewCode {
         return textField
     }()
 
-    private lazy var loginButton: UIButton = {
+    private(set) lazy var registerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Registre-se", for: .normal)
+        button.setTitle("R", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .magenta.withAlphaComponent(0.6)
         button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
 
@@ -49,11 +48,12 @@ final class RegisterViewScreen: UIView, ViewCode {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     @objc func tappedRegisterButton() {
         delegate?.tappedRegister()
     }
@@ -62,7 +62,11 @@ final class RegisterViewScreen: UIView, ViewCode {
         addSubview(welcomeLabel)
         addSubview(emailTextField)
         addSubview(passwordTextField)
-        addSubview(loginButton)
+        addSubview(registerButton)
+    }
+
+    func setupActions() {
+        registerButton.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
     }
 
     func setupConstraints() {
@@ -98,7 +102,7 @@ final class RegisterViewScreen: UIView, ViewCode {
     }
 
     private func setupLoginButtonConstraints() {
-        loginButton.snp.makeConstraints { make in
+        registerButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(16)
             make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(16)
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).inset(16)

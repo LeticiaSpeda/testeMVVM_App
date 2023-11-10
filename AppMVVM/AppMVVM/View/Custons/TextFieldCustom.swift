@@ -39,10 +39,6 @@ final class TextFieldCustom: UIView {
 
     private func configureStyle() {
         addSubview(tfComponent)
-//        tfComponent.makeConstraint { $0.equal(to: self) }
-        tfComponent.snp.makeConstraints { make in
-            make.height.equalTo(self)
-        }
     }
 }
 
