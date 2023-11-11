@@ -37,10 +37,11 @@ final class RegisterViewScreen: UIView, ViewCode {
 
     private(set) lazy var registerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("R", for: .normal)
+        button.setTitle("Registrar", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .magenta.withAlphaComponent(0.6)
+        button.backgroundColor = .gray
         button.layer.cornerRadius = 10
+        button.isEnabled = false
         return button
     }()
 

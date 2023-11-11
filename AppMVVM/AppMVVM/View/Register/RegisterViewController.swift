@@ -9,6 +9,8 @@ final class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         registerScreen.delegate = self
+        registerScreen.emailTextField.delegate = self
+        registerScreen.passwordTextField.delegate = self
         viewModel.delegate = self
     }
 
@@ -62,16 +64,18 @@ extension RegisterViewController: RegisterViewScreenProtocol {
 
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let email: String = registerScreen.emailTextField.text ?? ""
-        let passwordTextField: String = registerScreen.passwordTextField.text ?? ""
+
+        let email = registerScreen.emailTextField.text ?? ""
+        let passwordTextField = registerScreen.passwordTextField.text ?? ""
+                   
         if !email.isEmpty && !passwordTextField.isEmpty {
             registerScreen.registerButton.isEnabled = true
-            registerScreen.registerButton.backgroundColor = .darkGray
+            registerScreen.registerButton.backgroundColor = .magenta.withAlphaComponent(0.6)
         } else {
-            print ("Botao desabilitado")
             registerScreen.registerButton.isEnabled = false
-            registerScreen.registerButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+            registerScreen.registerButton.backgroundColor = .gray
         }
+
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder()
             return false

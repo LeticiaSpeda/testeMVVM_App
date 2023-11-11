@@ -43,7 +43,6 @@ final class LoginSreen: UIView, ViewCode {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .magenta.withAlphaComponent(0.6)
         button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
 
@@ -53,7 +52,6 @@ final class LoginSreen: UIView, ViewCode {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .magenta.withAlphaComponent(0.3)
         button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
 
@@ -75,8 +73,18 @@ final class LoginSreen: UIView, ViewCode {
         delegate?.tappedRegisterButton()
     }
 
-    func delegate(_ delegate: LoginScreenProtocol) {
-        self.delegate = delegate
+
+    func setupActions() {
+        loginButton.addTarget(
+            self,
+            action: #selector(tappedLoginButton),
+            for: .touchUpInside
+        )
+        registerButton.addTarget(
+            self,
+            action: #selector(tappedRegisterButton),
+            for: .touchUpInside
+        )
     }
 
     func setupHierarchy() {
