@@ -42,6 +42,9 @@
 		E012C87C2AF5771C0032CB08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E012C87B2AF5771C0032CB08 /* LoginViewController.swift */; };
 		E012C87F2AF577710032CB08 /* LoginSreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E012C87E2AF577710032CB08 /* LoginSreen.swift */; };
 		E03AED802AFC0BC400AAF9E1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AED7F2AFC0BC400AAF9E1 /* RegisterViewModel.swift */; };
+		E03AED872B02384000AAF9E1 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AED862B02384000AAF9E1 /* HomeService.swift */; };
+		E03AED892B023C3600AAF9E1 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AED882B023C3600AAF9E1 /* HomeData.swift */; };
+		E03AED8B2B026F8200AAF9E1 /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = E03AED8A2B026F8200AAF9E1 /* Response.json */; };
 		E040E4DB2ADB427C00D91089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040E4DA2ADB427C00D91089 /* AppDelegate.swift */; };
 		E040E4DD2ADB427C00D91089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040E4DC2ADB427C00D91089 /* SceneDelegate.swift */; };
 		E040E4DF2ADB427C00D91089 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040E4DE2ADB427C00D91089 /* HomeViewController.swift */; };
@@ -77,6 +80,9 @@
 		E012C87B2AF5771C0032CB08 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E012C87E2AF577710032CB08 /* LoginSreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSreen.swift; sourceTree = "<group>"; };
 		E03AED7F2AFC0BC400AAF9E1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		E03AED862B02384000AAF9E1 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		E03AED882B023C3600AAF9E1 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		E03AED8A2B026F8200AAF9E1 /* Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
 		E040E4D72ADB427C00D91089 /* AppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E040E4DA2ADB427C00D91089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E040E4DC2ADB427C00D91089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +218,15 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
+		E03AED852B02382300AAF9E1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E03AED862B02384000AAF9E1 /* HomeService.swift */,
+				E03AED8A2B026F8200AAF9E1 /* Response.json */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E040E4CE2ADB427C00D91089 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +248,7 @@
 		E040E4D92ADB427C00D91089 /* AppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				E03AED852B02382300AAF9E1 /* Service */,
 				E0DF9D402AE53BBA00DC184E /* Model */,
 				E044E1862ADD946C009BD2BE /* View */,
 				E044E17D2ADD8E98009BD2BE /* Extension */,
@@ -308,6 +324,7 @@
 			children = (
 				E0DF9D412AE53BC600DC184E /* Stories.swift */,
 				E00264C02AE821380089588F /* Posts.swift */,
+				E03AED882B023C3600AAF9E1 /* HomeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +350,7 @@
 				E040E4D42ADB427C00D91089 /* Frameworks */,
 				E040E4D52ADB427C00D91089 /* Resources */,
 				1C7116D2AC9B9ECCF7F6A2C0 /* [CP] Embed Pods Frameworks */,
+				E03AED812B00497E00AAF9E1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03AED8B2B026F8200AAF9E1 /* Response.json in Resources */,
 				E040E4E72ADB427F00D91089 /* LaunchScreen.storyboard in Resources */,
 				E012C8792AF572140032CB08 /* GoogleService-Info.plist in Resources */,
 				E040E4E42ADB427F00D91089 /* Assets.xcassets in Resources */,
@@ -461,6 +480,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppMVVM/Pods-AppMVVM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E03AED812B00497E00AAF9E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -480,7 +518,9 @@
 				E0DF9D3F2AE53B1200DC184E /* StoryCardViewModel.swift in Sources */,
 				E012C87C2AF5771C0032CB08 /* LoginViewController.swift in Sources */,
 				E0DF9D422AE53BC600DC184E /* Stories.swift in Sources */,
+				E03AED872B02384000AAF9E1 /* HomeService.swift in Sources */,
 				E0DBD8E52AF2DB5900CE86D8 /* PostCollectionViewCell.swift in Sources */,
+				E03AED892B023C3600AAF9E1 /* HomeData.swift in Sources */,
 				E0DBD8E22AF2D6F400CE86D8 /* PostCardViewModel.swift in Sources */,
 				E0D754C92AFA691C001E3AB6 /* RegisterViewScreen.swift in Sources */,
 				E044E1852ADD9415009BD2BE /* HomeViewModel.swift in Sources */,
@@ -546,7 +586,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;

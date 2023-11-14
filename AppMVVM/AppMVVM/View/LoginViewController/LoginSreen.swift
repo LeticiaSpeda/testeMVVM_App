@@ -73,7 +73,6 @@ final class LoginSreen: UIView, ViewCode {
         delegate?.tappedRegisterButton()
     }
 
-
     func setupActions() {
         loginButton.addTarget(
             self,

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Posts {
+struct Posts: Codable {
     let profileImage: String
     let userName: String
     let postImage: String
