@@ -1,20 +1,22 @@
 import UIKit
+import Alamofire
 
 final class HomeService {
 
-    func getHomeDataJson(completion: @escaping (HomeData?, Error?) -> Void) {
+    func getHomeDataAlamofire(completion: @escaping (HomeData?, Error?) -> Void) {
+        let url = "https://run.mocky.io/v3/4d35a699-c417-4ef7-bf88-645679a4c191"
 
-        if let url = Bundle.main.url(forResource: "Response.json", withExtension: nil) {
-            do {
-                let data = try Data(contentsOf: url)
-                let homeData: HomeData = try JSONDecoder().decode(HomeData.self, from: data)
-                
-                completion(homeData, nil)
-            } catch {
+        AF.request (url, method: .get).validate().responseDecodable(of: HomeData.self) { response in
+            debugPrint (response)
+
+            switch response.result {
+
+            case .success (let success):
+                completion(success, nil)
+
+            case . failure(let error):
                 completion (nil, error)
             }
         }
     }
 }
-
-

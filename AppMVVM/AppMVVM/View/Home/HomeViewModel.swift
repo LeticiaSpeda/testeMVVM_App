@@ -1,9 +1,16 @@
 import UIKit
 
+protocol HomeViewModelProtocol: AnyObject {
+    func success()
+    func error()
+}
+
 final class HomeViewModel {
     private var service = HomeService()
     private var posts = [Posts]()
     private var story = [Stories]()
+
+     weak var delegate: HomeViewModelProtocol?
 
     var getListStory: [Stories] {
         story
@@ -26,10 +33,13 @@ final class HomeViewModel {
     }
 
     func fetchAllRequest() {
-        service.getHomeDataJson { homeData, error in
+        service.getHomeDataAlamofire { homeData, error in
             if error == nil {
                 self.posts = homeData?.posts ?? []
                 self.story = homeData?.stories ?? []
+                self.delegate?.success()
+            } else {
+                self.delegate?.error()
             }
         }
     }

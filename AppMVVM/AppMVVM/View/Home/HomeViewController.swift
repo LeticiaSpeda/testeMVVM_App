@@ -1,6 +1,7 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
+
     private var homeScreen: HomeScreenView?
     private var viewModel = HomeViewModel()
 
@@ -12,11 +13,9 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeScreen?.configProtocolsCollectionView(
-            delegate: self,
-            dataSource: self
-        )
+
         viewModel.fetchAllRequest()
+        viewModel.delegate = self
         homeScreen?.collectionView.reloadData()
     }
 }
@@ -61,3 +60,17 @@ extension HomeViewController: UICollectionViewDelegate,
     }
 }
 
+extension HomeViewController: HomeViewModelProtocol {
+    func success() {
+        DispatchQueue.main.async {
+            self.homeScreen?.configProtocolsCollectionView(
+                delegate: self,
+                dataSource: self
+            )
+        }
+
+    }
+    
+    func error() {
+    }
+}

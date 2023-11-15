@@ -7,4 +7,5 @@ target 'AppMVVM' do
 
   # Pods for AppMVVM
   pod 'SnapKit'
+  pod 'Alamofire'
 end
