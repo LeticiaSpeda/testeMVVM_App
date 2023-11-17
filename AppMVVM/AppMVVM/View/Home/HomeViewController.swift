@@ -68,9 +68,11 @@ extension HomeViewController: HomeViewModelProtocol {
                 dataSource: self
             )
         }
-
     }
     
     func error() {
+        let alert = UIAlertController(title: "Error!", message: "falha no login", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+        present(alert, animated: true)
     }
 }
