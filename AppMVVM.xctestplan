@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "5510FBC9-3B05-461C-92AE-9BBCF5BB9B3A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:AppMVVM.xcodeproj",
+      "identifier" : "E03C2CCF2B079AB900012DD8",
+      "name" : "AppMVVM"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AppMVVM.xcodeproj",
+        "identifier" : "E03C2CEA2B07A18800012DD8",
+        "name" : "AppMVVMTests"
+      }
+    }
+  ],
+  "version" : 1
+}
