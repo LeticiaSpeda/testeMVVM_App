@@ -6,7 +6,7 @@ protocol LoginScreenDelegate: AnyObject {
     func tappedRegisterButton()
 }
 
-final class LoginSreen: UIView, ViewCode {
+final class LoginViewScreen: UIView, ViewCode {
 
     weak var delegate: LoginScreenDelegate?
 
@@ -65,23 +65,23 @@ final class LoginSreen: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func tappedLoginButton() {
+    @objc func handleLoginButton() {
         delegate?.tappedLoginButton()
     }
 
-    @objc func tappedRegisterButton() {
+    @objc func handleRegisterButton() {
         delegate?.tappedRegisterButton()
     }
 
     func setupActions() {
         loginButton.addTarget(
             self,
-            action: #selector(tappedLoginButton),
+            action: #selector(handleLoginButton),
             for: .touchUpInside
         )
         registerButton.addTarget(
             self,
-            action: #selector(tappedRegisterButton),
+            action: #selector(handleRegisterButton),
             for: .touchUpInside
         )
     }

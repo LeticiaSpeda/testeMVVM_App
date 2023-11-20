@@ -2,15 +2,16 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    private var loginScreen = LoginSreen()
+    private var loginScreen = LoginViewScreen()
     private var viewModel: LoginViewModeling
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginScreen = LoginSreen()
+        loginScreen = LoginViewScreen()
         view = loginScreen
         loginScreen.delegate = self
         viewModel.delegate = self
+        loginScreen.setupTextFieldDelegate(self)
     }
 
     init( viewModel: LoginViewModeling) {

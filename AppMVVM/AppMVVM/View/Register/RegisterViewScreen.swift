@@ -67,7 +67,7 @@ final class RegisterViewScreen: UIView, ViewCode {
     }
 
     func setupActions() {
-        registerButton.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(handleRegisterButton), for: .touchUpInside)
     }
 
     func setupConstraints() {
