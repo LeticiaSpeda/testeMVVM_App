@@ -1,16 +1,16 @@
 import UIKit
 import SnapKit
 
-protocol LoginScreenProtocol: AnyObject {
+protocol LoginScreenDelegate: AnyObject {
     func tappedLoginButton()
     func tappedRegisterButton()
 }
 
 final class LoginSreen: UIView, ViewCode {
 
-    weak var delegate: LoginScreenProtocol?
+    weak var delegate: LoginScreenDelegate?
 
-    private lazy var welcomeLabel: UILabel = {
+    private(set) lazy var welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "Bem Vindo!"
         label.textColor = .white
@@ -22,7 +22,7 @@ final class LoginSreen: UIView, ViewCode {
         let textField = UITextField()
         textField.layer.cornerRadius = 10
         textField.backgroundColor = .white.withAlphaComponent(0.8)
-        textField.attributedPlaceholder = NSAttributedString(string: " Digite seu email:", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: "Digite seu email:", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         textField.keyboardAppearance = .dark
         return textField
     }()
@@ -31,7 +31,7 @@ final class LoginSreen: UIView, ViewCode {
         let textField = UITextField()
         textField.layer.cornerRadius = 10
         textField.backgroundColor = .white.withAlphaComponent(0.8)
-        textField.attributedPlaceholder = NSAttributedString(string: " Digite sua senha:", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: "Digite sua senha:", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         textField.isSecureTextEntry = true
         textField.keyboardAppearance = .dark
         return textField
@@ -46,7 +46,7 @@ final class LoginSreen: UIView, ViewCode {
         return button
     }()
 
-    private lazy var registerButton: UIButton = {
+    private(set) lazy var registerButton: UIButton = {
         let button = UIButton()
         button.setTitle("Registre-se", for: .normal)
         button.setTitleColor(.white, for: .normal)

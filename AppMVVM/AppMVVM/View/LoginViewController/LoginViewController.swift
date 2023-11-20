@@ -36,7 +36,7 @@ extension LoginViewController: LoginViewModelDelegate {
     }
 }
 
-extension LoginViewController: LoginScreenProtocol {
+extension LoginViewController: LoginScreenDelegate {
     func tappedRegisterButton() {
         let viewModel = RegisterViewModel()
         let controller = RegisterViewController(viewModel: viewModel)

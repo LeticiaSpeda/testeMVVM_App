@@ -8,7 +8,7 @@ final class HomeService {
         case detailError(detail: String)
     }
 
-    func getHomeData(completion: @escaping (HomeData?, Error?) -> Void) {
+    func getHomeData (completion: @escaping (HomeData?, Error?) -> Void) {
         let url = "https://run.mocky.io/v3/4d35a699-c417-4ef7-bf88-645679a4c191"
         var urlRequest = URLRequest(url: URL(string: url)!)
         urlRequest.httpMethod = "GET"
