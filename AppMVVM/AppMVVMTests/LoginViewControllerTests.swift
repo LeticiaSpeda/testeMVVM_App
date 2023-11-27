@@ -50,6 +50,20 @@ final class LoginViewControllerTests: XCTestCase {
 
         XCTAssertEqual(env.viewModel.logginReceiveds.first?.password, "leticia")
     }
+
+
+    func test_whenLoginButton_clickedCalling_withEmailAndPasswordFieldsFilled() {
+        let env = makeEnvironment()
+
+        env.sut.loginScreen.emailTextField.text = "leticia@gmail.com"
+        env.sut.loginScreen.passwordTextField.text = "leticia"
+
+
+        env.sut.tappedLoginButton()
+
+        XCTAssertEqual(env.viewModel.logginReceiveds.first?.email, "leticia@gmail.com")
+        XCTAssertEqual(env.viewModel.logginReceiveds.first?.password, "leticia")
+    }
 }
 
 
