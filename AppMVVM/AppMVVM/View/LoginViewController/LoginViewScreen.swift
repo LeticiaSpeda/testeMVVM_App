@@ -1,14 +1,14 @@
 import UIKit
 import SnapKit
 
-protocol LoginScreenDelegate: AnyObject {
+protocol LoginViewScreenDelegate: AnyObject {
     func tappedLoginButton()
     func tappedRegisterButton()
 }
 
 final class LoginViewScreen: UIView, ViewCode {
 
-    weak var delegate: LoginScreenDelegate?
+    weak var delegate: LoginViewScreenDelegate?
 
     private(set) lazy var welcomeLabel: UILabel = {
         let label = UILabel()
@@ -65,11 +65,11 @@ final class LoginViewScreen: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func handleLoginButton() {
+    @objc private func handleLoginButton() {
         delegate?.tappedLoginButton()
     }
 
-    @objc func handleRegisterButton() {
+    @objc private func handleRegisterButton() {
         delegate?.tappedRegisterButton()
     }
 
@@ -154,4 +154,5 @@ final class LoginViewScreen: UIView, ViewCode {
         passwordTextField.delegate = delegate
     }
 }
+
 

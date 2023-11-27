@@ -55,7 +55,7 @@ final class RegisterViewScreen: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func tappedRegisterButton() {
+    @objc private func handleRegisterButton() {
         delegate?.tappedRegister()
     }
 

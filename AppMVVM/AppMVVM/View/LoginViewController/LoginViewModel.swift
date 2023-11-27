@@ -1,20 +1,21 @@
 import Foundation
 import Firebase
 
-protocol LoginViewModeling {
+protocol LoginViewScreenModeling {
     func login(email: String, password: String)
 
-    var delegate: LoginViewModelDelegate? { get set }
+    var delegate: LoginViewScreenModelDelegate? { get set }
 }
 
-protocol LoginViewModelDelegate: AnyObject {
+protocol LoginViewScreenModelDelegate: AnyObject {
     func sucessLogin()
     func errorLogin(errorMessage: String)
 }
 
-final class LoginViewModel: LoginViewModeling {
+final class LoginViewModel: LoginViewScreenModeling {
+
     private var auth = Auth.auth()
-    weak var delegate: LoginViewModelDelegate?
+    weak var delegate: LoginViewScreenModelDelegate?
 
     func login(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) {  authResult, error in
@@ -26,3 +27,6 @@ final class LoginViewModel: LoginViewModeling {
         }
     }
 }
+
+
+

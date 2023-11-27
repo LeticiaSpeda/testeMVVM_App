@@ -1,9 +1,9 @@
 import UIKit
 
-final class LoginViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    private var loginScreen = LoginViewScreen()
-    private var viewModel: LoginViewModeling
+    private(set) var loginScreen = LoginViewScreen()
+    private var viewModel: LoginViewScreenModeling
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
         loginScreen.setupTextFieldDelegate(self)
     }
 
-    init( viewModel: LoginViewModeling) {
+    init( viewModel: LoginViewScreenModeling) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,7 +23,7 @@ final class LoginViewController: UIViewController {
     required init?(coder: NSCoder) { nil }
 }
 
-extension LoginViewController: LoginViewModelDelegate {
+extension LoginViewController: LoginViewScreenModelDelegate {
     func sucessLogin() {
         let controller = HomeViewController()
         controller.modalPresentationStyle = .fullScreen
@@ -37,7 +37,7 @@ extension LoginViewController: LoginViewModelDelegate {
     }
 }
 
-extension LoginViewController: LoginScreenDelegate {
+extension LoginViewController: LoginViewScreenDelegate {
     func tappedRegisterButton() {
         let viewModel = RegisterViewModel()
         let controller = RegisterViewController(viewModel: viewModel)
@@ -48,7 +48,10 @@ extension LoginViewController: LoginScreenDelegate {
 
 
     func tappedLoginButton() {
-        viewModel.login(email: loginScreen.emailTextField.text ?? "", password: loginScreen.passwordTextField.text ?? "")
+        viewModel.login(
+            email: loginScreen.emailTextField.text ?? "",
+            password: loginScreen.passwordTextField.text ?? ""
+        )
     }
 }
 

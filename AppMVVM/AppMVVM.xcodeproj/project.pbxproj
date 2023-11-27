@@ -71,6 +71,7 @@
 		E0DF9D422AE53BC600DC184E /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DF9D412AE53BC600DC184E /* Stories.swift */; };
 		E0DF9D442AE5406100DC184E /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DF9D432AE5406100DC184E /* StoryCollectionViewCell.swift */; };
 		E0DF9D462AE540E800DC184E /* StoryCollectionViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DF9D452AE540E800DC184E /* StoryCollectionViewScreen.swift */; };
+		E0F8560C2B0ED82A00D8627C /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8560B2B0ED82A00D8627C /* LoginViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		E0DF9D412AE53BC600DC184E /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		E0DF9D432AE5406100DC184E /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0DF9D452AE540E800DC184E /* StoryCollectionViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewScreen.swift; sourceTree = "<group>"; };
+		E0F8560B2B0ED82A00D8627C /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		F64025B472D69EDF910E144A /* Pods-AppMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMVVM.release.xcconfig"; path = "Target Support Files/Pods-AppMVVM/Pods-AppMVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				E03C2D072B07A35100012DD8 /* LoginScreenTests.swift */,
+				E0F8560B2B0ED82A00D8627C /* LoginViewControllerTests.swift */,
 			);
 			path = AppMVVMTests;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F8560C2B0ED82A00D8627C /* LoginViewControllerTests.swift in Sources */,
 				E03C2D082B07A35100012DD8 /* LoginScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
