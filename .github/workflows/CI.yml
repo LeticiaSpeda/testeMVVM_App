@@ -12,8 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
+
     - name: intall dependencies
       run: pod install --project-directory=./AppMVVM
 
     - name: Clean & Build & Test
-      run: xcodebuild clean build -workspace AppMVVM/AppMVVM.xcworkspace -scheme AppMVVM CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination "platform=iOS Simulator,OS=16.4,name=Any iOS Simulator Device" ONLY_ACTIVE_ARCH=YES
+      run: xcodebuild clean build test -workspace AppMVVM/AppMVVM.xcworkspace -scheme AppMVVM CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination "platform=iOS Simulator,OS=16.4,name=iPhone 14" ONLY_ACTIVE_ARCH=YES
