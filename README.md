@@ -1,5 +1,5 @@
 # App RedeSocial 
-o Aplicativo rede social é uma rede onde o usuario pode visualizar os stories e posts de outros seguidores da sua rede e ate mesmo pode interagir com eles curtindo as fotos!
+o Aplicativo rede social é uma rede onde o usuario pode visualizar os stories e posts de outros seguidores da sua rede e ate mesmo pode interagir com eles curtindo as fotos! O intuito do app é imitar o estilo do instagram'
 
 ## Imagens e Videos:
 
