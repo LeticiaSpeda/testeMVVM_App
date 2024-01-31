@@ -13,5 +13,8 @@ jobs:
     - name: Configurando Ambiente
       uses: actions/checkout@v1
 
+    - name: intall dependencies
+      run: pod install
+
     - name: Clean & Build & Test
-      run: xcodebuild clean build test -project Momondo/Momondo.xcodeproj -scheme Momondo -destination "platform=iOS Simulator,OS=16.2,name=iPhone 14"
+      run: xcodebuild clean build test -workspace AppMVVM/AppMVVM.xcworkspace -scheme AppMVVM -destination "platform=iOS Simulator,OS=16.2,name=iPhone 14"
