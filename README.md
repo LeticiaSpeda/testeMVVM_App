@@ -6,12 +6,19 @@ O App RedeSocial é uma plataforma onde os usuários podem visualizar os stories
 
 - Visualização de Stories e Posts
 - Interação com Postagens (curtir fotos)
+- Login e Registro
+
+## Dependências
+
+Este projeto utiliza as seguintes dependências:
+
+- Para registro e login: `Firebase Authentication`
+- Para relatórios de crashes: `Firebase Crashlytics`
 
 ## Instalação
 
 1. Clone este repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
 2. Navegue até o diretório do projeto: `cd SocialGram`
-3. Instale as dependências: `npm install`
 
 ## Como Usar
 
