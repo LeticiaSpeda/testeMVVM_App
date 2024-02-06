@@ -17,7 +17,7 @@ Este projeto utiliza as seguintes dependências:
 
 ## Instalação
 
-1. Clone este repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
+1. Clone este repositório: `git clone https://github.com/LeticiaSpeda/SocialGram.git`
 2. Navegue até o diretório do projeto: `cd SocialGram`
 
 ## Como Usar
